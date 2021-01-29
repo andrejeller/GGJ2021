@@ -22,6 +22,7 @@ public class GameManager: MonoBehaviour {
 
     public GameObject ui_hora_das_palmas;
     public Slider sld_caminho;
+    public Transform osPais;
 
     private bool palmas_liberadas = false;
 
@@ -33,59 +34,77 @@ public class GameManager: MonoBehaviour {
     private float valor_bloqueia_as_palmas = 0.8f;
 
     private void Start() {
-        IniciarJogo();
+        // IniciarJogo();
     }
     public void IniciarJogo() {
         tempo_de_jogo = Time.time;
         ui_hora_das_palmas.SetActive(false);
         intervalo_das_palmas = valor_intervalo_das_palmas;
         bloqueia_as_palmas = 0.0f;
+        comecou = true;
         // Camera.main.transform.position = Vector3.zero;
     }
 
-    
+    bool comecou = false;
+    bool chegou_no_fim = false;
     void Update() {
 
+        if (!comecou) return;
+
         Transform cam = Camera.main.transform;
-        ui_hora_das_palmas.SetActive(palmas_liberadas);
-        //Debug.Log(Mathf.Lerp(-55.0f, 55.0f, cam.position.x) / 55.0f);
-        sld_caminho.value = cam.position.x;
+
+        // Chegou no 50, tudo para , hora do do tween
 
 
-        if (!palmas_liberadas) {
-            if (intervalo_das_palmas >= 0) {
-                intervalo_das_palmas -= Time.deltaTime;
+        if (cam.position.x < 50.0f) {
+            ui_hora_das_palmas.SetActive(palmas_liberadas);
+            sld_caminho.value = cam.position.x;
+
+
+            if (!palmas_liberadas) {
+                if (intervalo_das_palmas >= 0) {
+                    intervalo_das_palmas -= Time.deltaTime;
+                } else {
+                    intervalo_das_palmas = 0.0f;
+                    bloqueia_as_palmas = valor_bloqueia_as_palmas;
+                    palmas_liberadas = true;
+                }
             } else {
-                intervalo_das_palmas = 0.0f;
-                bloqueia_as_palmas = valor_bloqueia_as_palmas;
-                palmas_liberadas = true;
-            }
-        } else {
-            // Palmas liberadas
-            if (bloqueia_as_palmas >= 0) {
-                bloqueia_as_palmas -= Time.deltaTime;
+                // Palmas liberadas
+                if (bloqueia_as_palmas >= 0) {
+                    bloqueia_as_palmas -= Time.deltaTime;
 
-                if (Input.GetKeyDown(KeyCode.Space)) {
+                    if (Input.GetKeyDown(KeyCode.Space)) {
+                        bloqueia_as_palmas = 0.0f;
+                        intervalo_das_palmas = valor_intervalo_das_palmas;
+                        palmas_liberadas = false;
+                        vaiAte = cam.position.x + 5.0f;
+                        cam.DOMoveX(vaiAte, intervalo_das_palmas);
+                        Debug.Log("Deu Tempo");
+                    }
+
+                } else {
                     bloqueia_as_palmas = 0.0f;
                     intervalo_das_palmas = valor_intervalo_das_palmas;
                     palmas_liberadas = false;
-                    vaiAte = cam.position.x + 5.0f;
-                    cam.DOMoveX(vaiAte, intervalo_das_palmas);
-                    Debug.Log("Deu Tempo");
+                    if (cam.position.x >= -50.0f) {
+                        vaiAte = cam.position.x - 3.0f;
+                        cam.DOMoveX(vaiAte, intervalo_das_palmas);
+                    }
+                    Debug.Log("NÃO Deu Tempo");
                 }
 
-            } else {
-                bloqueia_as_palmas = 0.0f;
-                intervalo_das_palmas = valor_intervalo_das_palmas;
-                palmas_liberadas = false;
-                if (cam.position.x >= -50.0f) { 
-                    vaiAte = cam.position.x - 3.0f;
-                    cam.DOMoveX(vaiAte, intervalo_das_palmas);
-                }
-                Debug.Log("NÃO Deu Tempo");
+            }
+        } else {
+            // pequena animacao do final
+            if (!chegou_no_fim) {
+                chegou_no_fim = true;
+                AnimacaoFim();
             }
 
         }
+
+        
 
 
         
@@ -98,28 +117,13 @@ public class GameManager: MonoBehaviour {
     }
 
 
-    /*if (tempo_de_jogo == 0) return;
+    private void AnimacaoFim() {
 
-        if (Time.time - tempo_de_jogo >= 10.0f) {
-            Debug.Log("Fim de Jogo");
-        }*/
+        Camera.main.transform.DOMoveX(53.0f, 1.0f);
+        osPais.DOMove(new Vector3(54.0f, -1.6f, -1.7f), 1.0f);
+        // ativar pulos de alegria
+        //precisa entregar o filho tambem
+    }
 
-    /*
-     if (palmas_liberadas && Input.GetKeyDown(KeyCode.Space)) {
-            
-            tempo_volta = 0.0f;
-            BloqueiaPalma();
-        }
-
-        
-        // ele só volta se não estiver no começo
-        if (myCamera.transform.position.x >= -50.0f) {
-            if (tempo_volta > 0) {
-                tempo_volta -= Time.deltaTime;
-                vaiAte -= 0.1f;
-            }
-        }
-
-        
-     */
+    
 }
