@@ -117,6 +117,17 @@ public class GameManager: MonoBehaviour {
     }
 
 
+    public void BotaoDeTeste() {
+        if (Camera.main.transform.position.x < 50.0f && palmas_liberadas && bloqueia_as_palmas >= 0) {
+            bloqueia_as_palmas = 0.0f;
+            intervalo_das_palmas = valor_intervalo_das_palmas;
+            palmas_liberadas = false;
+            vaiAte = Camera.main.transform.position.x + 5.0f;
+            Camera.main.transform.DOMoveX(vaiAte, intervalo_das_palmas);
+            Debug.Log("Deu Tempo");
+        }
+    }
+
     private void AnimacaoFim() {
 
         Camera.main.transform.DOMoveX(53.0f, 1.0f);
