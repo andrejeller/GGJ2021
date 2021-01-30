@@ -33,7 +33,6 @@ public abstract class IGManager: MonoBehaviour {
 
         switch (instance.GameIs) {
             case State.Welcoming:
-                instance.StartCoroutine(instance.WelcomeCoroutine());
                 break;
             case State.MainMenu:
                 // FUNC
@@ -58,13 +57,11 @@ public abstract class IGManager: MonoBehaviour {
                 instance.StartCoroutine(instance.GameOverCoroutine());
                 break;
             case State.Info:
-                instance.StartCoroutine(instance.InfoCoroutine());
                 break;
             case State.HowToPlay:
                 // FUNC
                 break;
             case State.promo:
-                instance.StartCoroutine(instance.PromoCoroutine());
                 break;
             case State.wait:
                 // FUNC
