@@ -36,20 +36,20 @@ public class JanelaInfo : MonoBehaviour {
         transform.localScale = Vector2.zero;
         yield return null;
 
-        transform.DOScale(1.2f, 0.5f).OnComplete(() => {
-            transform.DOScale(1.0f, 0.4f);
+        transform.DOScale(1.2f, 0.3f).OnComplete(() => {
+            transform.DOScale(1.0f, 0.2f);
         });
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.5f);
         podeFechar = true;
     }
 
     private IEnumerator Fechar() {
         yield return null;
 
-        transform.DOScale(1.2f, 0.5f).OnComplete(() => {
-            transform.DOScale(0.0f, 0.4f);
+        transform.DOScale(1.2f, 0.3f).OnComplete(() => {
+            transform.DOScale(0.0f, 0.2f);
         });
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.5f);
         //gameObject.SetActive(true);
         podeAbrir = true;
     }
