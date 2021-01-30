@@ -22,7 +22,7 @@ public class GameManager: IGManager
     [Header("Paineis")]
     public S00_SplashMenu _sc_Menu;
     public S00_SplashGamePlay _sc_GamePlay;
-    public GameObject _sc_GameOver;
+    public S00_SplashGameOver _sc_GameOver;
 
 
     [Space]
@@ -43,8 +43,18 @@ public class GameManager: IGManager
 
     // 01 -- PRIMEIRO ESTADO
     private IEnumerator Start() {
+        yield return null;
         _sc_Menu.Hide();
         _sc_GamePlay.Hide();
+        _sc_GameOver.Hide();
+
+        _sc_GameOver.Show();
+        _sc_GameOver.Appear_Final();
+        yield return new WaitForSeconds(4.6f);
+        _sc_GameOver.Vanish_Final();
+
+        /*
+        
 
         SceneLoader.instance.InitializeOn();
         // crianca.MudarBone();
@@ -54,7 +64,7 @@ public class GameManager: IGManager
 
         yield return new WaitForSeconds(0.9f);
         ChangeGameState(State.Menu);
-
+        */
         //StateMachine();
     }
 

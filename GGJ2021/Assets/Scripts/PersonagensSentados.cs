@@ -19,7 +19,7 @@ public class PersonagensSentados: MonoBehaviour {
     private void Update() {
         if (levantei) return;
 
-        if (Camera.main.transform.position.x + 2.0f >= transform.position.x) {
+        if (Camera.main.transform.position.x + 3.0f >= transform.position.x) {
             Debug.Log("Levantei");
             levantei = true;
             HoraDeLevantar();
