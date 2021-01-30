@@ -11,7 +11,7 @@ public class SceneLoader: MonoBehaviour
     private static SceneLoader _instance;
     public static SceneLoader instance { get { return _instance; } private set { } }
 
-
+    public bool loadLiberado = false;
     public Image panel, ball;
     public SceneLoader_Ball ball_sc;
     //public GameObject ball;
@@ -41,21 +41,16 @@ public class SceneLoader: MonoBehaviour
     }
 
 
-    public void Show() {
-        StartCoroutine(ShowCorroutine());
+    public static void Show() {
+        instance.StartCoroutine(instance.ShowCorroutine());
     }
     public void Vanish() {
-        StartCoroutine(VanishCorroutine());
+        instance.StartCoroutine(instance.VanishCorroutine());
     }
     public static void ReloadScene() {
         int atual = SceneManager.GetActiveScene().buildIndex;
         instance.StartCoroutine(instance.LoadSceneCorroutine(atual));
     }
-
-    public static void LoadScene(int sceneIndex) {
-        instance.StartCoroutine(instance.LoadSceneCorroutine(sceneIndex));
-    }
-
 
     private IEnumerator VanishCorroutine() {
         yield return null;
@@ -71,34 +66,32 @@ public class SceneLoader: MonoBehaviour
         yield return null;
         float fadeTime = 0.9f;
 
-
         //ball_sc.rotate = true;
 
         ball.DOFade(1, fadeTime / 2);
         panel.DOFade(1, fadeTime);
 
+        yield return new WaitForSeconds(fadeTime);
+        loadLiberado = true;
+
     }
 
     private IEnumerator LoadSceneCorroutine(int sceneIndex) {
         yield return null;
-        Show();
-
-        yield return new WaitForSeconds(0.5f);
+        // Show();
+        // yield return new WaitForSeconds(0.5f);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        operation.allowSceneActivation = false;
+
+        yield return new WaitUntil(() => loadLiberado);
         operation.allowSceneActivation = true;
 
-        //yield return new WaitUntil(() => operation.isDone);
-
-        //operation.allowSceneActivation = true;
         operation.completed += (asyncOperation) => {
-            //
-            //operation.allowSceneActivation = true;
             new WaitForSeconds(0.5f);
+            loadLiberado = false;
             Vanish();
         };
-
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
 
     }

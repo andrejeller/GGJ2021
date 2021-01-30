@@ -62,7 +62,7 @@ public class S00_SplashGameOver: MonoBehaviour
             yield return new WaitForSeconds(0.2f); //0.2
         }
 
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(2.8f);
         travaPlay.SetActive(false);
 
     }

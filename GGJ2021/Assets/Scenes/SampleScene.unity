@@ -357,8 +357,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1769356172}
-        m_MethodName: BotaoPlay
+      - m_Target: {fileID: 1769356171}
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2286,6 +2286,7 @@ MonoBehaviour:
   setas: {fileID: 1092367282}
   acertou: {fileID: 1545598600}
   errou: {fileID: 647949290}
+  ads: {fileID: 14323285}
 --- !u!1 &435841668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4272,6 +4273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebf7cc480170484492cd9e0f48012dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadLiberado: 0
   panel: {fileID: 665003253}
   ball: {fileID: 2032028912}
   ball_sc: {fileID: 2032028914}
@@ -5398,7 +5400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.030451326, y: 0, z: 0, w: 0.9995363}
-  m_LocalPosition: {x: -53, y: 2.03, z: -10}
+  m_LocalPosition: {x: 30, y: 2.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 690646374}

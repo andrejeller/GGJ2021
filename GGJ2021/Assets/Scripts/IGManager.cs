@@ -100,7 +100,7 @@ public abstract class IGManager: MonoBehaviour {
     #region FUNCOES ABSTRATAS
     // protected abstract void HandleScreen(State WhatState);
     // protected abstract void StartTheGame(); // Já criei outra - IniciaroOJogo
-    protected abstract void PlayAgain();
+    public abstract void PlayAgain();
     #endregion
 
     #region CORROTINAS ABSTRATAS

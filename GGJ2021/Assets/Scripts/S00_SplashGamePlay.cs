@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class S00_SplashGamePlay: MonoBehaviour
-{
+public class S00_SplashGamePlay: MonoBehaviour {
 
     public GameObject palmas, sliderCaminho;
     public GameObject fundoTutorial, popUpTutorial, setas;
-    public GameObject acertou, errou;
+    public GameObject acertou, errou, ads;
 
     public void Appear() {
         StartCoroutine(ShowAll());
@@ -23,6 +22,7 @@ public class S00_SplashGamePlay: MonoBehaviour
         fundoTutorial.SetActive(true);
         popUpTutorial.SetActive(true);
         setas.SetActive(true);
+        ads.SetActive(true);
 
         // -- Hide all
         palmas.transform.localScale = Vector2.zero;
@@ -30,6 +30,7 @@ public class S00_SplashGamePlay: MonoBehaviour
         fundoTutorial.transform.localScale = Vector2.zero;
         popUpTutorial.transform.localScale = Vector2.zero;
         setas.transform.localScale = Vector2.zero;
+        ads.transform.localScale = Vector2.zero;
         yield return null;
 
         //Mover o texto de versao para cima
@@ -38,6 +39,7 @@ public class S00_SplashGamePlay: MonoBehaviour
         fundoTutorial.transform.DOScale(1.0f, 0.7f);
         popUpTutorial.transform.DOScale(1.0f, 0.7f);
         setas.transform.DOScale(1.0f, 0.7f);
+        ads.transform.DOScale(1.0f, 0.7f);
         ///versionText.transform.DOMoveY(20.0f, 1.0f);
         yield return new WaitForSeconds(0.2f);
 
@@ -54,11 +56,13 @@ public class S00_SplashGamePlay: MonoBehaviour
 
         // -- Hide cards and grass
         sliderCaminho.transform.DOScale(0.0f, 0.5f);
+        ads.transform.DOScale(0.0f, 0.5f);
         yield return new WaitForSeconds(0.5f);
 
         fundoTutorial.SetActive(false);
         popUpTutorial.SetActive(false);
         setas.SetActive(false);
+        ads.SetActive(false);
 
         Hide();
     }

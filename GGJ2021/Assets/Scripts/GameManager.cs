@@ -124,6 +124,41 @@ public class GameManager: IGManager
     }
 
 
+    protected override IEnumerator GameOverCoroutine() {
+        yield return null;
+        
+        Camera.main.transform.DOMoveX(53.0f, 1.0f);
+        osPais.DOMove(new Vector3(54.0f, -1.6f, -1.7f), 1.0f);
+        crianca.IrParaOsPais();
+        // ativar pulos de alegria
+        
+        _sc_GamePlay.Vanish();
+        yield return new WaitForSeconds(0.7f);
+
+        _sc_GameOver.Show();
+        _sc_GameOver.Appear_Falas();
+        yield return new WaitForSeconds(4.7f);
+
+        _sc_GameOver.Vanish_Falas();
+        yield return new WaitForSeconds(0.3f);
+
+        _sc_GameOver.Appear_Final();
+        // começa a recarregar a fase
+        SceneLoader.ReloadScene();
+        yield return new WaitForSeconds(3.0f);
+        
+        // libera o botao
+        
+    }
+
+    // comecar jogo de novo
+    public override void PlayAgain() {
+        SceneLoader.Show();
+        // SceneLoader.instance.loadLiberado = true;
+    }
+
+
+
     // bool comecou = false;
     bool chegou_no_fim = false;
     void Update() {
@@ -182,7 +217,8 @@ public class GameManager: IGManager
             // pequena animacao do final
             if (!chegou_no_fim) {
                 chegou_no_fim = true;
-                AnimacaoFim();
+                // AnimacaoFim();
+                ChangeGameState(State.GameOver);
             }
 
         }
@@ -209,15 +245,6 @@ public class GameManager: IGManager
             Camera.main.transform.DOMoveX(vaiAte, intervalo_das_palmas);
             Debug.Log("Deu Tempo");
         }
-    }
-
-    private void AnimacaoFim() {
-
-        Camera.main.transform.DOMoveX(53.0f, 1.0f);
-        osPais.DOMove(new Vector3(54.0f, -1.6f, -1.7f), 1.0f);
-        crianca.IrParaOsPais();
-        // ativar pulos de alegria
-        //precisa entregar o filho tambem
     }
 
     private float ValorIntervaloDasPalmas() {
@@ -250,13 +277,9 @@ public class GameManager: IGManager
 
 
     // -- AS OUTRAS ESTAO AQUI
-    protected override void PlayAgain() {
-        throw new System.NotImplementedException();
-    }
+    
 
-    protected override IEnumerator GameOverCoroutine() {
-        throw new System.NotImplementedException();
-    }
+
 
 
 
