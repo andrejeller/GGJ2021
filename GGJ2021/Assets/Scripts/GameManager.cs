@@ -48,12 +48,10 @@ public class GameManager: IGManager
         _sc_GamePlay.Hide();
         _sc_GameOver.Hide();
 
-        _sc_GameOver.Show();
-        _sc_GameOver.Appear_Final();
-        yield return new WaitForSeconds(4.6f);
-        _sc_GameOver.Vanish_Final();
+        // camera começa no -53
+        // crianca.IrParaOsPais();
 
-        /*
+        
         
 
         SceneLoader.instance.InitializeOn();
@@ -64,7 +62,7 @@ public class GameManager: IGManager
 
         yield return new WaitForSeconds(0.9f);
         ChangeGameState(State.Menu);
-        */
+        
         //StateMachine();
     }
 
@@ -217,6 +215,7 @@ public class GameManager: IGManager
 
         Camera.main.transform.DOMoveX(53.0f, 1.0f);
         osPais.DOMove(new Vector3(54.0f, -1.6f, -1.7f), 1.0f);
+        crianca.IrParaOsPais();
         // ativar pulos de alegria
         //precisa entregar o filho tambem
     }
