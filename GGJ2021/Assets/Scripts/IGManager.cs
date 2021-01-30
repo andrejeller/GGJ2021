@@ -104,14 +104,13 @@ public abstract class IGManager: MonoBehaviour {
     #endregion
 
     #region CORROTINAS ABSTRATAS
-    protected abstract IEnumerator WelcomeCoroutine();
+  
     protected abstract IEnumerator MenuCoroutine();
     protected abstract IEnumerator StartingCoroutine();
     protected abstract IEnumerator PlayingCoroutine();
 
    
-    protected abstract IEnumerator PromoCoroutine();
-    protected abstract IEnumerator InfoCoroutine();
+   
     protected abstract IEnumerator GameOverCoroutine();
     #endregion
 

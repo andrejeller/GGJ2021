@@ -32,30 +32,32 @@ public class GameManager: IGManager
     public CriancaPerdida crianca;
 
     private bool palmas_liberadas = false;
+    public bool botoes_liberados = false;
 
     // -55 -> +55
-    float vaiAte = 0.0f;
+    private float vaiAte = 0.0f;
     private float intervalo_das_palmas = 0.0f;
     private float bloqueia_as_palmas = 0.0f;
+    private bool chegou_no_fim = false;
 
     // private float valor_intervalo_das_palmas = 0.35f; // 0.35f
     // private float valor_bloqueia_as_palmas = 0.2f; // 0.2f
 
+
     // 01 -- PRIMEIRO ESTADO
     private IEnumerator Start() {
         yield return null;
+
+        botoes_liberados = false;
+
         _sc_Menu.Hide();
         _sc_GamePlay.Hide();
         _sc_GameOver.Hide();
 
         // camera começa no -53
-        // crianca.IrParaOsPais();
-
-        
-        
 
         SceneLoader.instance.InitializeOn();
-        // crianca.MudarBone();
+        crianca.MudarBone();
 
         yield return new WaitForSeconds(0.6f);
         SceneLoader.instance.Vanish();
@@ -72,11 +74,15 @@ public class GameManager: IGManager
         Debug.Log("Mostrando Menu");
         _sc_Menu.Show();
         _sc_Menu.Appear();
+        
+        yield return new WaitForSeconds(2.0f);
+        botoes_liberados = true;
     }
 
     // 03 -- APERTEI O PLAY -- StartTheGame
     public void IniciarJogo() {
-        if (_gameIs == State.Menu) {
+        if (_gameIs == State.Menu && botoes_liberados) {
+            botoes_liberados = false;
             ChangeGameState(State.Starting);
         }
         // Camera.main.transform.position = Vector3.zero;
@@ -126,7 +132,8 @@ public class GameManager: IGManager
 
     protected override IEnumerator GameOverCoroutine() {
         yield return null;
-        
+
+        botoes_liberados = false;
         Camera.main.transform.DOMoveX(53.0f, 1.0f);
         osPais.DOMove(new Vector3(54.0f, -1.6f, -1.7f), 1.0f);
         crianca.IrParaOsPais();
@@ -146,21 +153,19 @@ public class GameManager: IGManager
         // começa a recarregar a fase
         SceneLoader.ReloadScene();
         yield return new WaitForSeconds(3.0f);
-        
-        // libera o botao
-        
+
+        botoes_liberados = true;
     }
 
     // comecar jogo de novo
     public override void PlayAgain() {
-        SceneLoader.Show();
-        // SceneLoader.instance.loadLiberado = true;
+        if (botoes_liberados) {
+            botoes_liberados = false;
+            SceneLoader.Show();
+        }
     }
 
 
-
-    // bool comecou = false;
-    bool chegou_no_fim = false;
     void Update() {
         // ate -40 mais devagar
         if (_gameIs != State.Playing) return;
@@ -217,21 +222,10 @@ public class GameManager: IGManager
             // pequena animacao do final
             if (!chegou_no_fim) {
                 chegou_no_fim = true;
-                // AnimacaoFim();
                 ChangeGameState(State.GameOver);
             }
 
         }
-
-
-
-
-
-
-        //float final = Mathf.Lerp(cam.transform.position.x, vaiAte, 0.5f);
-        //cam.position = new Vector3(final, cam.position.y, cam.position.z);
-
-
 
     }
 
@@ -270,74 +264,6 @@ public class GameManager: IGManager
     }
 
 
-
-
-
-
-
-
-    // -- AS OUTRAS ESTAO AQUI
-    
-
-
-
-
-
-    // -- PARA DEPOIS
-
-    protected override IEnumerator WelcomeCoroutine() {
-        throw new System.NotImplementedException();
-    }
-
-    protected override IEnumerator PromoCoroutine() {
-        throw new System.NotImplementedException();
-    }
-
-    protected override IEnumerator InfoCoroutine() {
-        throw new System.NotImplementedException();
-    }
-
-    /*protected override void HandleScreen(State WhatState) {
-        // SERVE APENAS ATIVAR E DESATIVAR OS 'GAMEOBJECTS' 
-        // NÃO DEVE CHAMAR NENHUMA OUTRA FUNÇÃO
-        switch (WhatState) {
-            case State.Menu:
-                _sc_Menu.Show();
-                _sc_GamePlay.gameObject.SetActive(false);
-                _sc_GameOver.gameObject.SetActive(false);
-                break;
-            case State.Starting:
-                break;
-            case State.Playing:
-                _sc_GamePlay.gameObject.SetActive(true);
-
-                _sc_Menu.Hide();
-                _sc_GameOver.gameObject.SetActive(false); // Game Over é o Play Again
-                break;
-            
-            case State.GameOver:
-                _sc_GameOver.gameObject.SetActive(true);
-
-                _sc_Menu.Hide();
-                _sc_GamePlay.gameObject.SetActive(false);
-                break;
-            case State.Info:
-                break;
-            case State.HowToPlay:
-                //_sc_Pause.gameObject.SetActive(false);
-                //_sc_IndoParaOMenu.gameObject.SetActive(false);
-                break;
-            case State.promo:
-                break;
-            case State.wait:
-                break;
-            case State.none:
-                break;
-            default:
-                Debug.LogWarning("Algo Errado :/");
-                break;
-        }
-    }*/
-
+   
 
 }
