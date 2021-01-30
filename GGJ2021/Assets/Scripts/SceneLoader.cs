@@ -73,7 +73,6 @@ public class SceneLoader: MonoBehaviour
 
         yield return new WaitForSeconds(fadeTime);
         loadLiberado = true;
-
     }
 
     private IEnumerator LoadSceneCorroutine(int sceneIndex) {
