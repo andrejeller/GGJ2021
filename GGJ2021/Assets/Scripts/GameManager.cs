@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class GameManager: IGManager
-{
+public class GameManager: IGManager {
 
 
     public static GameManager local_instance;
     private void Awake() {
-        if (instance == null) {
+        if (instance == null && local_instance == null) {
             instance = this;
-        } else {
+            local_instance = this;
+        }
+        else {
             Destroy(gameObject);
         }
     }
@@ -195,13 +196,7 @@ public class GameManager: IGManager
                     bloqueia_as_palmas -= Time.deltaTime;
 
                     if (Input.GetKeyDown(KeyCode.Space)) {
-                        bloqueia_as_palmas = 0.0f;
-                        intervalo_das_palmas = ValorIntervaloDasPalmas();
-                        palmas_liberadas = false;
-                        vaiAte = cam.position.x + 2.0f;
-                        cam.DOMoveX(vaiAte, intervalo_das_palmas);
-                        Debug.Log("Deu Tempo");
-                        _sc_GamePlay.FlashAcertou();
+                        MovimentaComPalmas();
                     }
 
                 } else {
@@ -230,16 +225,27 @@ public class GameManager: IGManager
     }
 
 
+    public void ComandoAvancarComMicrofone() {
+        MovimentaComPalmas();
+    }
     public void BotaoDeTeste() {
-        if (Camera.main.transform.position.x < 50.0f && palmas_liberadas && bloqueia_as_palmas >= 0) {
+        MovimentaComPalmas();
+    }
+    private void MovimentaComPalmas() {
+
+        if (palmas_liberadas && Camera.main.transform.position.x < 50.0f && bloqueia_as_palmas >= 0 ) {
             bloqueia_as_palmas = 0.0f;
             intervalo_das_palmas = ValorIntervaloDasPalmas();
             palmas_liberadas = false;
-            vaiAte = Camera.main.transform.position.x + 5.0f;
+            vaiAte = Camera.main.transform.position.x + 2.0f;
             Camera.main.transform.DOMoveX(vaiAte, intervalo_das_palmas);
             Debug.Log("Deu Tempo");
+            _sc_GamePlay.FlashAcertou();
         }
+        
     }
+
+    
 
     private float ValorIntervaloDasPalmas() {
         // -50 -> + 50
