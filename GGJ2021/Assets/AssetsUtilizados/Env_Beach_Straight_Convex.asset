@@ -3,34 +3,37 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b71ad40e238046238f9b0c6f33c3791, type: 3}
-  m_Name: Vehicle_Boat_03_Convex
+  m_Name: Env_Beach_Straight_Convex
   m_EditorClassIdentifier: 
   ConvexMeshes:
-  - {fileID: 43619895736904008}
-  HashOfSourceMeshes: 22c1bc9bc580398c3996974600000000
---- !u!43 &43619895736904008
+  - {fileID: 43483941892806854}
+  HashOfSourceMeshes: fb778646bd2634de3996974600000000
+--- !u!43 &43483941892806854
 Mesh:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Generated convex submesh 1
-  serializedVersion: 8
+  serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
     indexCount: 84
     topology: 0
+    baseVertex: 0
     firstVertex: 0
     vertexCount: 16
     localAABB:
-      m_Center: {x: 0.024979115, y: 3.622555, z: 0}
-      m_Extent: {x: 2.6352305, y: 3.514528, z: 7.0272818}
+      m_Center: {x: -9.999954, y: -1.571117, z: -10}
+      m_Extent: {x: 10.15873, y: 1.586991, z: 10.15873}
   m_Shapes:
     vertices: []
     shapes: []
@@ -39,14 +42,17 @@ Mesh:
   m_BindPose: []
   m_BoneNameHashes: 
   m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexBuffer: 0a000e000f00040003000500010002000700050003000800000003000900030004000900030000000a00080003000a00060008000a00040005000b00070002000b00050007000b00010007000c00070005000c00050008000c00080006000c00090004000d000b0002000d0004000b000d00000009000e000a0000000e000d0002000e0009000d000e00020001000f0006000a000f0001000c000f000c0006000f000e0002000f00
-  m_Skin: []
+  m_IndexFormat: 0
+  m_IndexBuffer: 070005000f00030002000400020001000500050000000600000005000700010002000800020003000800070001000800030007000800020005000900060004000900000003000a00030004000a00040006000a00030000000b00070003000b00000007000b00060000000c0000000a000c000a0006000c00050006000d00090005000d00060009000d00040002000e00020009000e00090004000e00050001000f00010007000f00
   m_VertexData:
-    m_CurrentChannels: 1
+    serializedVersion: 3
     m_VertexCount: 16
     m_Channels:
     - stream: 0
@@ -81,8 +87,32 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
     m_DataSize: 192
-    _typelessdata: fa2d673fdebb3d40b6b2bdc0a10d78bf80266d3ec486cbbe200e593f526af13dfb93d2be8fb88f3ffc62e44041dffc3fe0402a40debb3d40b6b2bd405c0e27c0debb3d40b6b2bd406e96ddbfdebb3d40d77a85c003d180bf453ddd3d4c4bb240875389bffc62e44041dffc3fe0402a40debb3d4018fe5fbef66946bedebb3d407edfe0c0a60c2f3ff4e3443f7edfe0405c0e27c0debb3d406ab2e0bebcf01f40f81ec73f2819b2408112bc3ff2dec63f9dae8ac0208345bf05e3823fa4f085c0
+    _typelessdata: 0096223e000a823cd8759dc0372c99c1fcff3fc04f2c99c1fc44a1c1711e4ac059778fc1fc44a1c1000a823c55d3b1c0fc44a1c1ac719abe008a223e0096223e711e4ac059778fc10096223eac719abe008a223e0096223e28cc35c01445a1c1fc44a1c128cc35c01445a1c15c3d80c1711e4ac05dd887c1fc44a1c100fd7e3c008a223e0096223e000a823c55d3b1c00096223e00fd7e3c008a223e5aa248c1711e4ac05dd887c19d2d9cc1711e4ac0aaeb8cc12d735abffcff3fc04f2c99c1
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -136,9 +166,15 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.024979115, y: 3.622555, z: 0}
-    m_Extent: {x: 2.6352305, y: 3.514528, z: 7.0272818}
+    m_Center: {x: -9.999954, y: -1.571117, z: -10}
+    m_Extent: {x: 10.15873, y: 1.586991, z: 10.15873}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
-  m_MeshOptimized: 0
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: -1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 

@@ -579,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -611,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1070,6 +1074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_SidewalkPoles_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 115500, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6
@@ -1100,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1554,7 +1562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2245,6 +2253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_SidewalkPoles_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 115500, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40
@@ -2275,7 +2287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2307,6 +2319,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_Name
       value: Env_Beach_Straight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2374,6 +2390,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_Name
       value: Env_Beach_Straight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3211,6 +3231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vehicle_Boat_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9427ad0b999d0784fa3a660535722f1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9427ad0b999d0784fa3a660535722f1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.4
@@ -3608,16 +3632,16 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1396427153}
-  - {fileID: 882919212}
   - {fileID: 93234761}
   - {fileID: 1045774390}
   - {fileID: 1789589977}
   - {fileID: 206193482}
+  - {fileID: 882919212}
   - {fileID: 151626176}
   - {fileID: 982682596}
   - {fileID: 584409645}
   - {fileID: 314963217}
+  - {fileID: 1396427153}
   - {fileID: 638984839}
   - {fileID: 807695368}
   - {fileID: 1523136873}
@@ -3771,6 +3795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_SidewalkPoles_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 115500, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40
@@ -3801,7 +3829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4000,6 +4028,10 @@ PrefabInstance:
     - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4348,6 +4380,10 @@ PrefabInstance:
     - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5516,6 +5552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.470736
@@ -5975,6 +6015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Env_Beach_Corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.25
@@ -6133,6 +6177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_SidewalkPoles_01
       objectReference: {fileID: 0}
+    - target: {fileID: 115500, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.980003
@@ -6163,7 +6211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6558,6 +6606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_SidewalkPoles_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 115500, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.82
@@ -6588,7 +6640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 431104, guid: a5b72bb8afb9a3241ae5eb12007ad0ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7063,7 +7115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7095,6 +7147,10 @@ PrefabInstance:
     - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7869,6 +7925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MAR
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e59f0ab28e5f00044b38f7f806d1d29b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e59f0ab28e5f00044b38f7f806d1d29b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 281.85
@@ -8132,6 +8192,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a4f32105c55cd894ba7bd3d8b7d7b09c, type: 3}
       propertyPath: m_Name
       value: Env_Seawall_Corner_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a4f32105c55cd894ba7bd3d8b7d7b09c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a4f32105c55cd894ba7bd3d8b7d7b09c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8487,6 +8551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Env_Beach_Straight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0399971
@@ -8553,6 +8621,10 @@ PrefabInstance:
     - target: {fileID: 181330, guid: 9d77498a962b96a42958455df057bb88, type: 3}
       propertyPath: m_Name
       value: ST_Veh_Bus_Grey_Z
+      objectReference: {fileID: 0}
+    - target: {fileID: 181330, guid: 9d77498a962b96a42958455df057bb88, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 490054, guid: 9d77498a962b96a42958455df057bb88, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8628,6 +8700,10 @@ PrefabInstance:
     - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8960,6 +9036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01
       objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.33
@@ -8990,7 +9070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9433,6 +9513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.64
@@ -9755,6 +9839,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 995ba215d717b274ab23c457b54a0ad0, type: 3}
       propertyPath: m_Name
       value: Vehicle_Boat_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 995ba215d717b274ab23c457b54a0ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 995ba215d717b274ab23c457b54a0ad0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10444,7 +10532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 479068, guid: e1cc26c508a6ec34e95a50f62aa7b3df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10547,6 +10635,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_Name
       value: Env_Beach_Straight
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10677,6 +10769,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f563dd64e55318041bc8dec64b5d4804, type: 3}
       propertyPath: m_Name
       value: Env_Seawall_Corner_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f563dd64e55318041bc8dec64b5d4804, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f563dd64e55318041bc8dec64b5d4804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11087,6 +11183,10 @@ PrefabInstance:
     - target: {fileID: 171608, guid: 20f1b3d447d0239418ea4a4d0b365105, type: 3}
       propertyPath: m_Name
       value: ST_Veh_Fire_Truck_Z
+      objectReference: {fileID: 0}
+    - target: {fileID: 171608, guid: 20f1b3d447d0239418ea4a4d0b365105, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 471080, guid: 20f1b3d447d0239418ea4a4d0b365105, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12200,6 +12300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_HotdogStand_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 106796, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425504, guid: dcf86cbc986e8ca40a2bfa2fff49fc0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.930737
@@ -12405,6 +12509,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_Name
       value: Env_Beach_Corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_LocalPosition.x
