@@ -29,6 +29,7 @@ public class GameManager: IGManager
     public GameObject ui_hora_das_palmas;
     public Slider sld_caminho;
     public Transform osPais;
+    public CriancaPerdida crianca;
 
     private bool palmas_liberadas = false;
 
@@ -46,6 +47,7 @@ public class GameManager: IGManager
         _sc_GamePlay.Hide();
 
         SceneLoader.instance.InitializeOn();
+        // crianca.MudarBone();
 
         yield return new WaitForSeconds(0.6f);
         SceneLoader.instance.Vanish();
