@@ -24,7 +24,7 @@ public class GameManager: IGManager {
     public S00_SplashMenu _sc_Menu;
     public S00_SplashGamePlay _sc_GamePlay;
     public S00_SplashGameOver _sc_GameOver;
-
+    public JanelaInfo lembreDoFone;
 
     [Space]
     public GameObject ui_hora_das_palmas;
@@ -64,16 +64,23 @@ public class GameManager: IGManager {
         SceneLoader.instance.Vanish();
 
         yield return new WaitForSeconds(0.9f);
-        ChangeGameState(State.Menu);
-        
+        //ChangeGameState(State.Menu);
+        _sc_Menu.Show();
+        lembreDoFone.AbrirJanela();
+
         //StateMachine();
     }
+
+    public void FecharLembreteFone() {
+        lembreDoFone.FecharJanela();
+        ChangeGameState(State.Menu);
+    }
+
 
     // 02 -- VAMOS COMEÇAR ABRINDO O MENU
     protected override IEnumerator MenuCoroutine() {
         yield return null;
         Debug.Log("Mostrando Menu");
-        _sc_Menu.Show();
         _sc_Menu.Appear();
         
         yield return new WaitForSeconds(2.0f);
