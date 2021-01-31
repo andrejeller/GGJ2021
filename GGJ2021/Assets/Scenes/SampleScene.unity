@@ -270,7 +270,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "seu objetivo neste jogo \xE9 ajudar o garoto perdido a encontrar seus
     pais \n\ncomo em uma praia Brasileira, voc\xEA deve LITERALMENTE bater palmas
-    para ajudar a chamar\n a aten\xE7\xE3o\n\nassim, toda vez que o simbolo aparecer
+    para ajudar a chamar\n aten\xE7\xE3o\n\nassim, toda vez que o simbolo aparecer
     e voc\xEA bater palmas junto com ele, os personagens andam para frente, e caso
     n\xE3o consiga eles voltam\n\ne lembre-se, os outros turistas podem te ajudar
     a ir mais r\xE1pido!"
@@ -5291,7 +5291,7 @@ RectTransform:
   m_GameObject: {fileID: 729928431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1589478946}
   m_Father: {fileID: 1869783943}
@@ -11758,9 +11758,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "este jogo foi desenvolvido durante a GLOBAL GAME JAM 2021 com o tema \"lost
     and found\".\n\njogo desenvolvido por\nANDR\xC9 JELLER\n\nmusica e efeitos sonoros
-    por GABRIEL GABS...\n\ncomo n\xE3o tinha artista, este jogo apenas foi poss\xEDvel
-    utilizando modelos 3D e imagens 2D do GOOGLE POLY, STYNITY, KENNEY e GAME DEVELOPER
-    STUDIO.\n\n"
+    por GABRIEL OLIVEIRA\n\nestando sem artista, este jogo apenas foi poss\xEDvel
+    utilizando modelos, imagens  e anima\xE7\xF5es do GOOGLE POLY, STYNITY, KENNEY
+    MIXAMO e GAME DEVELOPER STUDIO.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
