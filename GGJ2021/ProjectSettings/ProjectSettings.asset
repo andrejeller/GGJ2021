@@ -169,7 +169,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.andrejeller.GGJ2021
   buildNumber: {}
   AndroidBundleVersionCode: 4
   AndroidMinSdkVersion: 19
@@ -249,8 +250,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: f549806a8085de642ac0886c14b54ebe, type: 3}
-  AndroidKeystoreName: '{dedicated}: Downloads/myKeyAndroid.keystore'
-  AndroidKeyaliasName: androidkey
+  AndroidKeystoreName: '{dedicated}: Desktop/Chave_Testes_Beta.keystore'
+  AndroidKeyaliasName: chave para testes beta
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
